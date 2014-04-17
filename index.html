@@ -1,5 +1,6 @@
 <html>
   <head>
+  <script type="text/javascript" src="elapseMe.min.js"></script>
   <title>Does Microsoft Azure have a billing API?</title>
   <style>
   html {
@@ -47,6 +48,15 @@ padding-top: 6px;
 }
     
 </style>
+
+
+<script type="text/javascript">
+window.onload = function()
+{  
+  elapseMe({year: 2010, month: 5,day: 21,targetId:"elapsedTime1"});  
+}
+</script>
+
   </head>
   <body>
     <div id="vertical">   
@@ -55,33 +65,7 @@ padding-top: 6px;
 		</div>
 	</div>
 
-<label id="minutes">00</label>:<label id="seconds">00</label>
-    <script type="text/javascript">
-        var minutesLabel = document.getElementById("minutes");
-        var secondsLabel = document.getElementById("seconds");
-        var totalSeconds = 0;
-        setInterval(setTime, 1000);
-
-        function setTime()
-        {
-            ++totalSeconds;
-            secondsLabel.innerHTML = pad(totalSeconds%60);
-            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
-        }
-
-        function pad(val)
-        {
-            var valString = val + "";
-            if(valString.length < 2)
-            {
-                return "0" + valString;
-            }
-            else
-            {
-                return valString;
-            }
-        }
-    </script>
+<div id="elapsedTime1"> </div>
  
   </body>
 </html>
