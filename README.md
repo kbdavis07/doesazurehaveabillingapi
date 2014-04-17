@@ -1,3 +1,2 @@
-Q: Does Microsoft Azure have a billing API?
-A: No
+Does Microsoft Azure have a billing API?
 
